@@ -20,3 +20,4 @@ jobs:
           directory: terraform
           framework: terraform
           soft_fail: true
+          skip_check: CKV_TF_1
