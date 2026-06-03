@@ -1,0 +1,17 @@
+project_name = "kubeadm-bootstrap"
+environment  = "dev"
+region       = "us-east-1"
+
+cidr           = "10.22.0.0/16"
+public_subnets = ["10.22.1.0/24", "10.22.2.0/24"]
+
+manage_default_route_table   = true
+manage_default_network_acl   = true
+public_dedicated_network_acl = true
+
+# Ubuntu LTS version - 24.04 or 26.04
+ubuntu_version = "24.04"
+
+# t3.medium is the minimum recommended for kubeadm (2 vCPU, 4GB RAM)
+control_plane_instance_type = "t3.medium"
+worker_instance_type        = "t3.medium"
